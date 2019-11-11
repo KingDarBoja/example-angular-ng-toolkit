@@ -1,0 +1,23 @@
+@import './src/styles/variables';
+
+footer {
+	background-color: $primary-dark;
+	color: white;
+	font-size: 0.8rem;
+}
+
+fa-icon {
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+#universallogo {
+	max-height: 120px;
+}
+
+#copyright {
+	padding-top: 1rem;
+}

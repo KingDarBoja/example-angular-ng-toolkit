@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-md navbar-light">
+	<a class="navbar-brand" [routerLink]="['/home']">
+		<img class="logo" src="/assets/images/universal-horizontal.png" alt="Logo oficial" />
+	</a>
+	<button class="navbar-toggler hidden-sm-up" type="button" data-target="#navbarsDefault"
+		aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarsDefault">
+		<ul id="navbarMenu" class="navbar-nav ml-auto">
+			<li class="nav-item mx-2" [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/home']">Home</a>
+			</li>
+			<li class="nav-item mx-2" [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/section-a']">Title A</a>
+			</li>
+			<li class="nav-item mx-2" [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/section-b']">Title B</a>
+			</li>
+			<li class="nav-item mx-2" [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/section-c']">Title C</a>
+			</li>
+			<li class="nav-item mx-2" [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/section-d']">Title D</a>
+			</li>
+		</ul>
+		<div class="d-flex flex-row order-2 order-sm-3">
+			<ul id="navbarRedes" class="navbar-nav flex-row">
+				<li class="nav-item">
+					<a class="nav-link px-2" href="#" alt="Universal Facebook"
+						aria-label="Random facebook text">
+						<fa-icon [icon]="['fab', 'facebook-square']"></fa-icon>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link px-2" href="https://twitter.com/universal" alt="Universal Twitter"
+						aria-label="Random twitter text">
+						<fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link px-2" href="https://www.instagram.com/universal/" alt="Universal Instagram"
+						aria-label="Random instagram text.">
+						<fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link px-2" href="https://co.linkedin.com/company/universal" alt="Universal Linkedin"
+						aria-label="Random linkedin text">
+						<fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="d-flex flex-row order-3">
+			<div class="btn-group" dropdown>
+				<button dropdownToggle type="button" class="btn btn-white dropdown-toggle">
+					{{ selectedSortOrder | uppercase }} <span class="caret"></span>
+				</button>
+				<ul *dropdownMenu id="language-dropdown" class="dropdown-menu dropdown-menu-right" role="menu"
+					aria-labelledby="language-dropdown">
+					<ng-container *ngFor="let sortOrder of sortOrders">
+						<li role="menuitem">
+							<a class="dropdown-item"
+								(click)="changeSortOrder(sortOrder)">{{ sortOrder | uppercase }}</a>
+						</li>
+					</ng-container>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>

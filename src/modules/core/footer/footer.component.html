@@ -1,0 +1,58 @@
+<footer class="container-fluid pt-5 pb-5">
+	<div class="row justify-content-center">
+		<div class="d-none d-md-block col-md-4 col-lg-4 align-self-end order-md-1">
+			<div class="container">
+				<h4 class="font-weight-bold">Universal</h4>
+				<div class="row mt-2 mb-2 no-gutters">
+					<div class="col-md-4"><a [routerLink]="['/section-a']">Title A</a></div>
+				</div>
+				<div class="row mt-2 mb-2 no-gutters">
+					<div class="col-md-4"><a [routerLink]="['/section-b']">Title B</a></div>
+				</div>
+				<div class="row mt-2 mb-2 no-gutters">
+					<div class="col-md-4"><a [routerLink]="['/section-c']">Title C</a></div>
+					<div class="col-md-8 font-weight-bold">Side text</div>
+				</div>
+				<div class="row mt-2 mb-2 no-gutters">
+					<div class="col-md-4"><a [routerLink]="['/section-d']">Title D</a></div>
+					<div class="col-md-8">Side text</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-md-4 col-lg-4 align-self-end text-center order-2">
+			<img id="universallogo" class="img-fluid" src="/assets/images/universal-logo.png"
+				alt="Universal White Logo" />
+			<div id="copyright">
+				<fa-icon [icon]="['far', 'copyright']"></fa-icon> {{ today | date: 'yyyy' }} universal. <span>Copyright
+					text</span>
+			</div>
+		</div>
+		<div class="pr-md-5 col-12 col-md-4 col-lg-4 align-self-end order-1 order-md-3 pb-4 pb-md-0">
+			<div class="container">
+				<div class="row justify-content-center justify-content-md-end">
+					<span class="col-2 col-md-1 mx-2 mx-md-1 footer-icon">
+						<a href="#" alt="universal Facebook" aria-label="Random facebook text">
+							<fa-icon [icon]="['fab', 'facebook-square']" size="2x"></fa-icon>
+						</a>
+					</span>
+					<span class="col-2 col-md-1 mx-2 mx-md-1 footer-icon">
+						<a href="#" alt="universal Twitter" aria-label="Random twitter text">
+							<fa-icon [icon]="['fab', 'twitter']" size="2x"></fa-icon>
+						</a>
+					</span>
+					<span class="col-2 col-md-1 mx-2 mx-md-1 footer-icon">
+						<a href="#" alt="universal Instagram" aria-label="Random instagram text">
+							<fa-icon [icon]="['fab', 'instagram']" size="2x"></fa-icon>
+						</a>
+					</span>
+					<span class="col-2 col-md-1 mx-2 mx-md-1 footer-icon">
+						<a href="#" alt="universal Linkedin"
+							aria-label="Random linkedin text">
+							<fa-icon [icon]="['fab', 'linkedin']" size="2x"></fa-icon>
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
