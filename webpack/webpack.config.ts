@@ -10,16 +10,15 @@ const config: webpack.Configuration = {
 		server: './server.ts',
 		prerender: './prerender.ts',
 	},
-	// externals: {
-	// 	'./dist/server/main': 'require("./server/main")'
-	// },
+	externals: {
+		'./dist/server/main': 'require("./server/main")'
+	},
 	target: 'node',
 	resolve: { extensions: ['.ts', '.js'] },
 	optimization: {
 		minimize: false,
 	},
 	output: {
-		libraryTarget: 'commonjs2',
 		// Puts the output at the root of the dist folder
 		path: path.resolve(process.cwd(), 'dist'),
 		filename: '[name].js',
